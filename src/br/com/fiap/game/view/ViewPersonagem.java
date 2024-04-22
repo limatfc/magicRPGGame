@@ -1,3 +1,8 @@
+package br.com.fiap.game.view;
+
+import br.com.fiap.game.model.HabilidadeEspecial;
+import br.com.fiap.game.model.PersonagemMagico;
+
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -32,8 +37,8 @@ public class ViewPersonagem {
 
         } else if (userOption == 2){
             if (novoPersonagem != null) {
-                System.out.println("Nome:" + novoPersonagem.name + "\nPoder: " + novoPersonagem.magicPower + "\nEnergia: " + novoPersonagem.energyLevel);
-                System.out.println("Noma habilidade:" + novoPersonagem.habilidadeEspecial.nome + "\nCusto: " + novoPersonagem.habilidadeEspecial.custoEnergia + "\nHabilidade disponivel: " + novoPersonagem.habilidadeEspecial.habilitada);
+                System.out.println("Nome:" + novoPersonagem.getName() + "\nPoder: " + novoPersonagem.getMagicPower() + "\nEnergia: " + novoPersonagem.getEnergyLevel());
+                System.out.println("Noma habilidade:" + novoPersonagem.getHabilidadeEspecial().getNome() + "\nCusto: " + novoPersonagem.getHabilidadeEspecial().getCustoEnergia() + "\nHabilidade disponivel: " + novoPersonagem.getHabilidadeEspecial().isHabilitada());
             } else {
                 System.out.println("Ops, voce tem que cadastrar um item primeiro");
             }

@@ -1,3 +1,8 @@
+package br.com.fiap.game.view;
+
+
+import br.com.fiap.game.model.Item;
+
 import java.util.Scanner;
 
 public class ViewItem {
@@ -11,16 +16,16 @@ public class ViewItem {
             userOption = sc.nextInt();
             if (userOption == 1){
                 System.out.println("Digite o nome do item:");
-                novoItem.name  = sc.next() + sc.nextLine();
+                novoItem.setName(sc.next() + sc.nextLine());
                 System.out.println("Digite a descricao do item:");
-                novoItem.description = sc.next() + sc.nextLine();
+                novoItem.setDescription(sc.next() + sc.nextLine());
                 System.out.println("Digite o nivel de poder do item:");
-                novoItem.powerLevel = sc.nextInt();
+                novoItem.setPowerLevel(sc.nextInt());
                 System.out.println("O item é raro(true/false):");
-                novoItem.rare = sc.nextBoolean();
+                novoItem.setRare(sc.nextBoolean());
 
             } else if (userOption == 2){
-                System.out.println("Nome:" + novoItem.name + "\nDescricao: " + novoItem.description + "\nNivel de poder: " + novoItem.powerLevel + "\nRaro: " + novoItem.rare);
+                System.out.println("Nome:" + novoItem.getName() + "\nDescricao: " + novoItem.getDescription() + "\nNivel de poder: " + novoItem.getPowerLevel() + "\nRaro: " + novoItem.getRare());
             } else if (userOption == 3){
                 System.out.println("Obrigada por brincar conosco");
             } else {
